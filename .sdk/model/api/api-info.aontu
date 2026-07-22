@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/kittyvpn"
+      }
+      description: "Kitty Net VPN provides fast access to YouTube, Instagram, and other sites without blocks, encrypts traffic, and does not keep logs."
+      servers: [
+        {
+          description: "Kitty Net VPN API Server"
+          url: "https://s3.ru1.storage.beget.cloud"
+        }
+      ]
+      summary: "Kitty Net VPN provides fast access to YouTube, Instagram, and other sites without blocks, encrypts traffic, and does not keep logs."
+      title: "Kitty Net VPN"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/kittyvpn"
+    }
+  }
+}
+

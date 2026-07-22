@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Kitty Net VPN",
+    "description": "Kitty Net VPN provides fast access to YouTube, Instagram, and other sites without blocks, encrypts traffic, and does not keep logs.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/kittyvpn"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://s3.ru1.storage.beget.cloud",
+      "description": "Kitty Net VPN API Server"
+    }
+  ],
+  "paths": {
+    "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json": {
+      "get": {
+        "summary": "Get proxy list",
+        "description": "Retrieves the list of available VPN servers from Kitty Net VPN. Returns a remote configuration file containing server information.",
+        "operationId": "getServersList",
+        "tags": [
+          "Servers"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response containing the list of VPN servers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Remote configuration containing VPN server list",
+                  "properties": {
+                    "servers": {
+                      "type": "array",
+                      "description": "List of available VPN servers",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the server"
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "Display name of the server"
+                          },
+                          "host": {
+                            "type": "string",
+                            "description": "Server hostname or IP address"
+                          },
+                          "port": {
+                            "type": "integer",
+                            "description": "Server port number"
+                          },
+                          "protocol": {
+                            "type": "string",
+                            "description": "VPN protocol used by the server"
+                          },
+                          "location": {
+                            "type": "string",
+                            "description": "Geographic location of the server"
+                          },
+                          "country": {
+                            "type": "string",
+                            "description": "Country code of the server location"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Servers",
+      "description": "Operations related to VPN server management and retrieval"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository and Documentation",
+    "url": "https://github.com/l0v3m0n3y/kittyvpn"
+  }
+}
