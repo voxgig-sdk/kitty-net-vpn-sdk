@@ -26,8 +26,8 @@ import {
 describe('ServerEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when KITTYNETVPN_TEST_LIVE=TRUE.
-  afterEach(liveDelay('KITTYNETVPN_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when KITTY_NET_VPN_TEST_LIVE=TRUE.
+  afterEach(liveDelay('KITTY_NET_VPN_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = KittyNetVpnSDK.test()
@@ -63,7 +63,7 @@ describe('ServerEntity', async () => {
     const server_ref01_ent = client.Server()
     const server_ref01_match: any = {}
 
-    const server_ref01_list = await server_ref01_ent.list(server_ref01_match)
+    const server_ref01_list = (await server_ref01_ent.list(server_ref01_match)).map((e: any) => e.data())
 
 
   })

@@ -23,8 +23,8 @@ module KittyNetVpnTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("KITTYNETVPN_TEST_LIVE")
-    override = getenv("KITTYNETVPN_TEST_OVERRIDE")
+    live = getenv("KITTY_NET_VPN_TEST_LIVE")
+    override = getenv("KITTY_NET_VPN_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module KittyNetVpnTestRunner
       end
     end
 
-    explain = getenv("KITTYNETVPN_TEST_EXPLAIN")
-    m["KITTYNETVPN_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("KITTY_NET_VPN_TEST_EXPLAIN")
+    m["KITTY_NET_VPN_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

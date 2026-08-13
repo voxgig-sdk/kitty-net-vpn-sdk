@@ -35,8 +35,8 @@ end
 
 
 function runner.env_override(m)
-  local live = runner.getenv("KITTYNETVPN_TEST_LIVE")
-  local override = runner.getenv("KITTYNETVPN_TEST_OVERRIDE")
+  local live = runner.getenv("KITTY_NET_VPN_TEST_LIVE")
+  local override = runner.getenv("KITTY_NET_VPN_TEST_OVERRIDE")
 
   if live == "TRUE" or override == "TRUE" then
     for key, _ in pairs(m) do
@@ -56,9 +56,9 @@ function runner.env_override(m)
     end
   end
 
-  local explain = runner.getenv("KITTYNETVPN_TEST_EXPLAIN")
+  local explain = runner.getenv("KITTY_NET_VPN_TEST_EXPLAIN")
   if explain ~= nil and explain ~= "" then
-    m["KITTYNETVPN_TEST_EXPLAIN"] = explain
+    m["KITTY_NET_VPN_TEST_EXPLAIN"] = explain
   end
 
   return m

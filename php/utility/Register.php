@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ KittyNetVpnUtility::setRegistrar(function (KittyNetVpnUtility $u): void {
     $u->prepare_params = [KittyNetVpnPrepareParams::class, 'call'];
     $u->prepare_path = [KittyNetVpnPreparePath::class, 'call'];
     $u->prepare_query = [KittyNetVpnPrepareQuery::class, 'call'];
+    $u->graphql_body = [KittyNetVpnGraphql::class, 'body'];
+    $u->graphql_errors = [KittyNetVpnGraphql::class, 'errors'];
     $u->result_basic = [KittyNetVpnResultBasic::class, 'call'];
     $u->result_body = [KittyNetVpnResultBody::class, 'call'];
     $u->result_headers = [KittyNetVpnResultHeaders::class, 'call'];

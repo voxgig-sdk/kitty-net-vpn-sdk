@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import KittyNetVpnSDK
-from core.error import KittyNetVpnError
-from core.result import KittyNetVpnResult
-from core.response import KittyNetVpnResponse
-from core.spec import KittyNetVpnSpec
-from feature.base_feature import KittyNetVpnBaseFeature
+from projectname_sdk.core.error import KittyNetVpnError
+from projectname_sdk.core.result import KittyNetVpnResult
+from projectname_sdk.core.response import KittyNetVpnResponse
+from projectname_sdk.core.spec import KittyNetVpnSpec
+from projectname_sdk.feature.base_feature import KittyNetVpnBaseFeature
 
 
 def _client():

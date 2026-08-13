@@ -92,7 +92,7 @@ func TestServerEntity(t *testing.T) {
 		// The basic flow consumes synthetic IDs from the fixture. In live mode
 		// without an *_ENTID env override, those IDs hit the live API and 4xx.
 		if setup.syntheticOnly {
-			t.Skip("live entity test uses synthetic IDs from fixture — set KITTYNETVPN_TEST_SERVER_ENTID JSON to run live")
+			t.Skip("live entity test uses synthetic IDs from fixture — set KITTY_NET_VPN_TEST_SERVER_ENTID JSON to run live")
 			return
 		}
 		client := setup.client
@@ -160,21 +160,21 @@ func serverBasicSetup(extra map[string]any) *entityTestSetup {
 	// Detect ENTID env override before envOverride consumes it. When live
 	// mode is on without a real override, the basic test runs against synthetic
 	// IDs from the fixture and 4xx's. Surface this so the test can skip.
-	entidEnvRaw := os.Getenv("KITTYNETVPN_TEST_SERVER_ENTID")
+	entidEnvRaw := os.Getenv("KITTY_NET_VPN_TEST_SERVER_ENTID")
 	idmapOverridden := entidEnvRaw != "" && strings.HasPrefix(strings.TrimSpace(entidEnvRaw), "{")
 
 	env := envOverride(map[string]any{
-		"KITTYNETVPN_TEST_SERVER_ENTID": idmap,
-		"KITTYNETVPN_TEST_LIVE":      "FALSE",
-		"KITTYNETVPN_TEST_EXPLAIN":   "FALSE",
+		"KITTY_NET_VPN_TEST_SERVER_ENTID": idmap,
+		"KITTY_NET_VPN_TEST_LIVE":      "FALSE",
+		"KITTY_NET_VPN_TEST_EXPLAIN":   "FALSE",
 	})
 
-	idmapResolved := core.ToMapAny(env["KITTYNETVPN_TEST_SERVER_ENTID"])
+	idmapResolved := core.ToMapAny(env["KITTY_NET_VPN_TEST_SERVER_ENTID"])
 	if idmapResolved == nil {
 		idmapResolved = core.ToMapAny(idmap)
 	}
 
-	if env["KITTYNETVPN_TEST_LIVE"] == "TRUE" {
+	if env["KITTY_NET_VPN_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
 			},
@@ -183,13 +183,13 @@ func serverBasicSetup(extra map[string]any) *entityTestSetup {
 		client = sdk.NewKittyNetVpnSDK(core.ToMapAny(mergedOpts))
 	}
 
-	live := env["KITTYNETVPN_TEST_LIVE"] == "TRUE"
+	live := env["KITTY_NET_VPN_TEST_LIVE"] == "TRUE"
 	return &entityTestSetup{
 		client:        client,
 		data:          entityData,
 		idmap:         idmapResolved,
 		env:           env,
-		explain:       env["KITTYNETVPN_TEST_EXPLAIN"] == "TRUE",
+		explain:       env["KITTY_NET_VPN_TEST_EXPLAIN"] == "TRUE",
 		live:          live,
 		syntheticOnly: live && !idmapOverridden,
 		now:           time.Now().UnixMilli(),

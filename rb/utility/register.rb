@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ KittyNetVpnUtility.registrar = ->(u) {
   u.prepare_params = KittyNetVpnUtilities::PrepareParams
   u.prepare_path = KittyNetVpnUtilities::PreparePath
   u.prepare_query = KittyNetVpnUtilities::PrepareQuery
+  u.graphql_body = KittyNetVpnUtilities::GraphqlBody
+  u.graphql_errors = KittyNetVpnUtilities::GraphqlErrors
   u.result_basic = KittyNetVpnUtilities::ResultBasic
   u.result_body = KittyNetVpnUtilities::ResultBody
   u.result_headers = KittyNetVpnUtilities::ResultHeaders

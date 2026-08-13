@@ -62,7 +62,7 @@ main: kit: entity: server: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.servers`"
           }
         }
       ]

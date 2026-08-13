@@ -84,6 +84,7 @@ module KittyNetVpnConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
                   "parts" => [
@@ -94,7 +95,7 @@ module KittyNetVpnConfig
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.servers`",
                   },
                   "index$" => 0,
                 },

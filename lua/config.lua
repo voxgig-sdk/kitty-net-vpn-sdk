@@ -83,6 +83,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
                 ["parts"] = {
@@ -93,7 +94,7 @@ local function make_config()
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.servers`",
                 },
                 ["index$"] = 0,
               },

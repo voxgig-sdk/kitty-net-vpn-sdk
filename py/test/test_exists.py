@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# KittyNetVpn SDK exists test
 
 import pytest
 from kittynetvpn_sdk import KittyNetVpnSDK

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import KittyNetVpnControl
-from core.error import KittyNetVpnError
-from core.result import KittyNetVpnResult
-from core.spec import KittyNetVpnSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import KittyNetVpnControl
+from projectname_sdk.core.error import KittyNetVpnError
+from projectname_sdk.core.result import KittyNetVpnResult
+from projectname_sdk.core.spec import KittyNetVpnSpec
 
 
 # True when this SDK was generated with the named feature.

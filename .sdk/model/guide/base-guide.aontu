@@ -8,6 +8,7 @@ guide: {
   entity: server: {
     path: "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.servers`")|top
     }
   }
 

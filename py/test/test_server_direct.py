@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from kittynetvpn_sdk.utility.voxgig_struct import voxgig_struct as vs
 from kittynetvpn_sdk import KittyNetVpnSDK
-from core import helpers
+from kittynetvpn_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _server_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "KITTYNETVPN_TEST_SERVER_ENTID": {},
-        "KITTYNETVPN_TEST_LIVE": "FALSE",
+        "KITTY_NET_VPN_TEST_SERVER_ENTID": {},
+        "KITTY_NET_VPN_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("KITTYNETVPN_TEST_LIVE") == "TRUE"
+    live = env.get("KITTY_NET_VPN_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

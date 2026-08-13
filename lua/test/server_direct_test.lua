@@ -61,11 +61,11 @@ function server_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["KITTYNETVPN_TEST_SERVER_ENTID"] = {},
-    ["KITTYNETVPN_TEST_LIVE"] = "FALSE",
+    ["KITTY_NET_VPN_TEST_SERVER_ENTID"] = {},
+    ["KITTY_NET_VPN_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["KITTYNETVPN_TEST_LIVE"] == "TRUE"
+  local live = env["KITTY_NET_VPN_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
