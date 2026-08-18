@@ -28,7 +28,7 @@ class KittyNetVpnSDK
     utility = KittyNetVpnUtility.new
     @_utility = utility
 
-    config = KittyNetVpnConfig.make_config
+    config = KittyNetVpnConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

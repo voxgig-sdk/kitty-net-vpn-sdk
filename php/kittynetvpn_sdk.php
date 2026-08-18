@@ -40,7 +40,7 @@ class KittyNetVpnSDK
         $utility = new KittyNetVpnUtility();
         $this->_utility = $utility;
 
-        $config = KittyNetVpnConfig::make_config();
+        $config = KittyNetVpnConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

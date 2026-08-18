@@ -23,6 +23,7 @@ build = {
   modules = {
     ["kitty-net-vpn_sdk"] = "kitty-net-vpn_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }
