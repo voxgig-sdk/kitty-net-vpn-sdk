@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'KittyNetVpn',
+        slug: "kitty-net-vpn",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -56,30 +67,37 @@ class Config {
       "fields": [
         {
           "name": "country",
+          "short": "Country code of the server location",
           "type": "`$STRING`"
         },
         {
           "name": "host",
+          "short": "Server hostname or IP address",
           "type": "`$STRING`"
         },
         {
           "name": "id",
+          "short": "Unique identifier for the server",
           "type": "`$STRING`"
         },
         {
           "name": "location",
+          "short": "Geographic location of the server",
           "type": "`$STRING`"
         },
         {
           "name": "name",
+          "short": "Display name of the server",
           "type": "`$STRING`"
         },
         {
           "name": "port",
+          "short": "Server port number",
           "type": "`$INTEGER`"
         },
         {
           "name": "protocol",
+          "short": "VPN protocol used by the server",
           "type": "`$STRING`"
         }
       ],

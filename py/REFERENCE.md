@@ -87,13 +87,13 @@ server = client.Server()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `country` | `str` | No |  |
-| `host` | `str` | No |  |
-| `id` | `str` | No |  |
-| `location` | `str` | No |  |
-| `name` | `str` | No |  |
-| `port` | `int` | No |  |
-| `protocol` | `str` | No |  |
+| `country` | `str` | No | Country code of the server location |
+| `host` | `str` | No | Server hostname or IP address |
+| `id` | `str` | No | Unique identifier for the server |
+| `location` | `str` | No | Geographic location of the server |
+| `name` | `str` | No | Display name of the server |
+| `port` | `int` | No | Server port number |
+| `protocol` | `str` | No | VPN protocol used by the server |
 
 ### Operations
 

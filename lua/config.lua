@@ -7,6 +7,9 @@ local function make_config()
   return {
     main = {
       name = "KittyNetVpn",
+      slug = "kitty-net-vpn",
+      version = "0.0.1",
+      target = "lua",
     },
     feature = {
       ["test"] = {
@@ -29,30 +32,37 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "country",
+            ["short"] = "Country code of the server location",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "host",
+            ["short"] = "Server hostname or IP address",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "id",
+            ["short"] = "Unique identifier for the server",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "location",
+            ["short"] = "Geographic location of the server",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "name",
+            ["short"] = "Display name of the server",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "port",
+            ["short"] = "Server port number",
             ["type"] = "`$INTEGER`",
           },
           {
             ["name"] = "protocol",
+            ["short"] = "VPN protocol used by the server",
             ["type"] = "`$STRING`",
           },
         },

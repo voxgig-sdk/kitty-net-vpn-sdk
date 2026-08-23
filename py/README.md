@@ -243,13 +243,13 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `country` |  |
-| `host` |  |
-| `id` |  |
-| `location` |  |
-| `name` |  |
-| `port` |  |
-| `protocol` |  |
+| `country` | Country code of the server location |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `location` | Geographic location of the server |
+| `name` | Display name of the server |
+| `port` | Server port number |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -274,13 +274,13 @@ Create an instance: `server = client.Server()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `country` | `str` |  |
-| `host` | `str` |  |
-| `id` | `str` |  |
-| `location` | `str` |  |
-| `name` | `str` |  |
-| `port` | `int` |  |
-| `protocol` | `str` |  |
+| `country` | `str` | Country code of the server location |
+| `host` | `str` | Server hostname or IP address |
+| `id` | `str` | Unique identifier for the server |
+| `location` | `str` | Geographic location of the server |
+| `name` | `str` | Display name of the server |
+| `port` | `int` | Server port number |
+| `protocol` | `str` | VPN protocol used by the server |
 
 #### Example: List
 

@@ -237,13 +237,13 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `country` |  |
-| `host` |  |
-| `id` |  |
-| `location` |  |
-| `name` |  |
-| `port` |  |
-| `protocol` |  |
+| `country` | Country code of the server location |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `location` | Geographic location of the server |
+| `name` | Display name of the server |
+| `port` | Server port number |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -268,13 +268,13 @@ Create an instance: `server = client.Server`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `country` | `String` |  |
-| `host` | `String` |  |
-| `id` | `String` |  |
-| `location` | `String` |  |
-| `name` | `String` |  |
-| `port` | `Integer` |  |
-| `protocol` | `String` |  |
+| `country` | `String` | Country code of the server location |
+| `host` | `String` | Server hostname or IP address |
+| `id` | `String` | Unique identifier for the server |
+| `location` | `String` | Geographic location of the server |
+| `name` | `String` | Display name of the server |
+| `port` | `Integer` | Server port number |
+| `protocol` | `String` | VPN protocol used by the server |
 
 #### Example: List
 

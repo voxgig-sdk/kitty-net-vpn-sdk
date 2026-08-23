@@ -93,13 +93,13 @@ server = client.Server
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `country` | `String` | No |  |
-| `host` | `String` | No |  |
-| `id` | `String` | No |  |
-| `location` | `String` | No |  |
-| `name` | `String` | No |  |
-| `port` | `Integer` | No |  |
-| `protocol` | `String` | No |  |
+| `country` | `String` | No | Country code of the server location |
+| `host` | `String` | No | Server hostname or IP address |
+| `id` | `String` | No | Unique identifier for the server |
+| `location` | `String` | No | Geographic location of the server |
+| `name` | `String` | No | Display name of the server |
+| `port` | `Integer` | No | Server port number |
+| `protocol` | `String` | No | VPN protocol used by the server |
 
 ### Operations
 

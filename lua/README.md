@@ -231,13 +231,13 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `country` |  |
-| `host` |  |
-| `id` |  |
-| `location` |  |
-| `name` |  |
-| `port` |  |
-| `protocol` |  |
+| `country` | Country code of the server location |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `location` | Geographic location of the server |
+| `name` | Display name of the server |
+| `port` | Server port number |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -262,13 +262,13 @@ Create an instance: `local server = client:Server(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `country` | `string` |  |
-| `host` | `string` |  |
-| `id` | `string` |  |
-| `location` | `string` |  |
-| `name` | `string` |  |
-| `port` | `number` |  |
-| `protocol` | `string` |  |
+| `country` | `string` | Country code of the server location |
+| `host` | `string` | Server hostname or IP address |
+| `id` | `string` | Unique identifier for the server |
+| `location` | `string` | Geographic location of the server |
+| `name` | `string` | Display name of the server |
+| `port` | `number` | Server port number |
+| `protocol` | `string` | VPN protocol used by the server |
 
 #### Example: List
 

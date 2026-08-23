@@ -90,13 +90,13 @@ local server = client:Server(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `country` | `string` | No |  |
-| `host` | `string` | No |  |
-| `id` | `string` | No |  |
-| `location` | `string` | No |  |
-| `name` | `string` | No |  |
-| `port` | `number` | No |  |
-| `protocol` | `string` | No |  |
+| `country` | `string` | No | Country code of the server location |
+| `host` | `string` | No | Server hostname or IP address |
+| `id` | `string` | No | Unique identifier for the server |
+| `location` | `string` | No | Geographic location of the server |
+| `name` | `string` | No | Display name of the server |
+| `port` | `number` | No | Server port number |
+| `protocol` | `string` | No | VPN protocol used by the server |
 
 ### Operations
 

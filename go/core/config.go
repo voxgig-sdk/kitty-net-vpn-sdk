@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "KittyNetVpn",
+			"slug": "kitty-net-vpn",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,30 +36,37 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "country",
+						"short": "Country code of the server location",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "host",
+						"short": "Server hostname or IP address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the server",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "location",
+						"short": "Geographic location of the server",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Display name of the server",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "port",
+						"short": "Server port number",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "protocol",
+						"short": "VPN protocol used by the server",
 						"type": "`$STRING`",
 					},
 				},
