@@ -79,6 +79,10 @@ module KittyNetVpnConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "server",
           "op" => {
             "list" => {
@@ -90,16 +94,27 @@ module KittyNetVpnConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
-                  "parts" => [
-                    "01c6b4d1fccf-thankful-aisling",
-                    "ext_config",
-                    "remote-config.json",
+                  "segments" => [
+                    {
+                      "lit" => "01c6b4d1fccf-thankful-aisling",
+                    },
+                    {
+                      "lit" => "ext_config",
+                    },
+                    {
+                      "lit" => "remote-config.json",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body.servers`",
                   },
+                  "parts" => [
+                    "01c6b4d1fccf-thankful-aisling",
+                    "ext_config",
+                    "remote-config.json",
+                  ],
                 },
               ],
             },

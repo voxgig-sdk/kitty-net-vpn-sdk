@@ -1,6 +1,14 @@
 # KittyNetVpn SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -88,6 +96,10 @@ def make_config():
             "type": "`$STRING`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "server",
         "op": {
           "list": {
@@ -99,16 +111,27 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
-                "parts": [
-                  "01c6b4d1fccf-thankful-aisling",
-                  "ext_config",
-                  "remote-config.json",
+                "segments": [
+                  {
+                    "lit": "01c6b4d1fccf-thankful-aisling",
+                  },
+                  {
+                    "lit": "ext_config",
+                  },
+                  {
+                    "lit": "remote-config.json",
+                  },
                 ],
                 "select": {},
                 "transform": {
                   "req": "`reqdata`",
                   "res": "`body.servers`",
                 },
+                "parts": [
+                  "01c6b4d1fccf-thankful-aisling",
+                  "ext_config",
+                  "remote-config.json",
+                ],
               },
             ],
           },

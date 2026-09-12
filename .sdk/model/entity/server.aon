@@ -62,10 +62,16 @@ main: kit: entity: server: {
         {
           method: "GET"
           orig: "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
-          parts: [
-            "01c6b4d1fccf-thankful-aisling"
-            "ext_config"
-            "remote-config.json"
+          segments: [
+            {
+              lit: "01c6b4d1fccf-thankful-aisling"
+            }
+            {
+              lit: "ext_config"
+            }
+            {
+              lit: "remote-config.json"
+            }
           ]
           transform: {
             req: "`reqdata`"

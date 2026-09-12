@@ -10,6 +10,17 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
+// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
+// the model's active plugin groups. A feature that takes a `plugins` option
+// (secrets over sekreto) reads its own entry; a feature with no plugins has
+// none. Named imports above make each definition statically reachable, so
+// an SDK carries exactly the plugin modules its model selects — the same
+// leanness the old side-effect registry imports bought, without a registry.
+const FEATURE_PLUGINS: Record<string, any[]> = {
+  
+}
+
+
 class Config {
 
   makeFeature(this: any, fn: string) {
@@ -102,6 +113,10 @@ class Config {
           "type": "`$STRING`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "server",
       "op": {
         "list": {
@@ -113,16 +128,27 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
-              "parts": [
-                "01c6b4d1fccf-thankful-aisling",
-                "ext_config",
-                "remote-config.json"
+              "segments": [
+                {
+                  "lit": "01c6b4d1fccf-thankful-aisling"
+                },
+                {
+                  "lit": "ext_config"
+                },
+                {
+                  "lit": "remote-config.json"
+                }
               ],
               "select": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.servers`"
-              }
+              },
+              "parts": [
+                "01c6b4d1fccf-thankful-aisling",
+                "ext_config",
+                "remote-config.json"
+              ]
             }
           ]
         }
@@ -138,6 +164,7 @@ class Config {
 const config = new Config()
 
 export {
-  config
+  config,
+  FEATURE_PLUGINS,
 }
 
