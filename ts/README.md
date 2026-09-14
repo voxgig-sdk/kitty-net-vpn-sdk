@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn'
+import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn-sdk'
 
 const client = new KittyNetVpnSDK()
 ```
@@ -415,7 +415,7 @@ kitty-net-vpn/
 Import the SDK from the package root:
 
 ```ts
-import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn'
+import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn-sdk'
 ```
 
 ### Entity state

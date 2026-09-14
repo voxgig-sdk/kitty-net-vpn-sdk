@@ -105,7 +105,7 @@ local results, err = client:Server():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
+| TypeScript | `@voxgig-sdk/kitty-net-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
 | Python | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
 | PHP | `voxgig-sdk/kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/kitty-net-vpn-sdk/go` | `go get github.com/voxgig-sdk/kitty-net-vpn-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Server():list()
 ### TypeScript
 
 ```ts
-import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn'
+import { KittyNetVpnSDK } from '@voxgig-sdk/kitty-net-vpn-sdk'
 
 const client = new KittyNetVpnSDK()
 
