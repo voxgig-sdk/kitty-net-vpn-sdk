@@ -60,6 +60,12 @@ main: kit: entity: server: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
+            json: "{\"operationId\":\"getServersList\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"description\":\"Remote configuration containing VPN server list\",\"properties\":{\"servers\":{\"description\":\"List of available VPN servers\",\"items\":{\"properties\":{\"country\":{\"description\":\"Country code of the server location\",\"type\":\"string\"},\"host\":{\"description\":\"Server hostname or IP address\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the server\",\"type\":\"string\"},\"location\":{\"description\":\"Geographic location of the server\",\"type\":\"string\"},\"name\":{\"description\":\"Display name of the server\",\"type\":\"string\"},\"port\":{\"description\":\"Server port number\",\"type\":\"integer\"},\"protocol\":{\"description\":\"VPN protocol used by the server\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}},\"type\":\"object\"}}},\"description\":\"Successful response containing the list of VPN servers\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
           segments: [

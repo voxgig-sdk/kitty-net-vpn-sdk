@@ -7,7 +7,7 @@
         "id": "SERVER00",
         "location": "s49",
         "name": "s4a",
-        "port": "s4b",
+        "port": 75,
         "protocol": "s4c"
       },
       "SERVER01": {
@@ -16,7 +16,7 @@
         "id": "SERVER01",
         "location": "s8f",
         "name": "s90",
-        "port": "s91",
+        "port": 145,
         "protocol": "s92"
       },
       "SERVER02": {
@@ -25,7 +25,7 @@
         "id": "SERVER02",
         "location": "sd5",
         "name": "sd6",
-        "port": "sd7",
+        "port": 215,
         "protocol": "sd8"
       }
     }
@@ -37,8 +37,87 @@
         "host": "s119",
         "location": "s11b",
         "name": "s11c",
-        "port": "s11d",
+        "port": 285,
         "protocol": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getServersList",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Remote configuration containing VPN server list",
+                  "properties": {
+                    "servers": {
+                      "description": "List of available VPN servers",
+                      "items": {
+                        "properties": {
+                          "country": {
+                            "description": "Country code of the server location",
+                            "type": "string"
+                          },
+                          "host": {
+                            "description": "Server hostname or IP address",
+                            "type": "string"
+                          },
+                          "id": {
+                            "description": "Unique identifier for the server",
+                            "type": "string"
+                          },
+                          "location": {
+                            "description": "Geographic location of the server",
+                            "type": "string"
+                          },
+                          "name": {
+                            "description": "Display name of the server",
+                            "type": "string"
+                          },
+                          "port": {
+                            "description": "Server port number",
+                            "type": "integer"
+                          },
+                          "protocol": {
+                            "description": "VPN protocol used by the server",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response containing the list of VPN servers"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }

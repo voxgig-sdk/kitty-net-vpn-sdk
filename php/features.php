@@ -4,7 +4,10 @@ declare(strict_types=1);
 // KittyNetVpn SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class KittyNetVpnFeatures
@@ -14,8 +17,14 @@ class KittyNetVpnFeatures
         switch ($name) {
             case "base":
                 return new KittyNetVpnBaseFeature();
+            case "ratelimit":
+                return new KittyNetVpnRatelimitFeature();
+            case "retry":
+                return new KittyNetVpnRetryFeature();
             case "test":
                 return new KittyNetVpnTestFeature();
+            case "timeout":
+                return new KittyNetVpnTimeoutFeature();
             default:
                 return new KittyNetVpnBaseFeature();
         }
@@ -31,7 +40,10 @@ class KittyNetVpnFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

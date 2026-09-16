@@ -1,12 +1,18 @@
 # KittyNetVpn SDK feature factory
 
 from kittynetvpn_sdk.feature.base_feature import KittyNetVpnBaseFeature
+from kittynetvpn_sdk.feature.ratelimit_feature import KittyNetVpnRatelimitFeature
+from kittynetvpn_sdk.feature.retry_feature import KittyNetVpnRetryFeature
 from kittynetvpn_sdk.feature.test_feature import KittyNetVpnTestFeature
+from kittynetvpn_sdk.feature.timeout_feature import KittyNetVpnTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: KittyNetVpnBaseFeature(),
+    "ratelimit": lambda: KittyNetVpnRatelimitFeature(),
+    "retry": lambda: KittyNetVpnRetryFeature(),
     "test": lambda: KittyNetVpnTestFeature(),
+    "timeout": lambda: KittyNetVpnTimeoutFeature(),
 }
 
 
