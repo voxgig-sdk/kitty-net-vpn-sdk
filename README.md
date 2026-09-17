@@ -105,12 +105,12 @@ local results, err = client:Server():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/kitty-net-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
-| Python | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
-| PHP | `voxgig-sdk/kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
+| TypeScript | `@voxgig-sdk/kitty-net-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/tags) |
+| Python | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/tags) |
+| PHP | `voxgig-sdk/kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/kitty-net-vpn-sdk/go` | `go get github.com/voxgig-sdk/kitty-net-vpn-sdk/go@latest` |
-| Ruby | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
-| Lua | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/releases) |
+| Ruby | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/tags) |
+| Lua | `voxgig-sdk-kitty-net-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/kitty-net-vpn-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/kitty-net-vpn-sdk/go-cli` | `go install github.com/voxgig-sdk/kitty-net-vpn-sdk/go-cli/cmd/kitty-net-vpn@latest` |
 | Go MCP server | `github.com/voxgig-sdk/kitty-net-vpn-sdk/go-mcp` | `go get github.com/voxgig-sdk/kitty-net-vpn-sdk/go-mcp@latest` |
 
