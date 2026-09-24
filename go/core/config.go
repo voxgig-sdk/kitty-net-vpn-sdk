@@ -91,38 +91,45 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "country",
-						"short": "Country code of the server location",
+						"title": "Country",
 						"type": "`$STRING`",
+						"short": "Country code of the server location",
 					},
 					map[string]any{
 						"name": "host",
-						"short": "Server hostname or IP address",
+						"title": "Host",
 						"type": "`$STRING`",
+						"short": "Server hostname or IP address",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the server",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the server",
 					},
 					map[string]any{
 						"name": "location",
-						"short": "Geographic location of the server",
+						"title": "Location",
 						"type": "`$STRING`",
+						"short": "Geographic location of the server",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Display name of the server",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Display name of the server",
 					},
 					map[string]any{
 						"name": "port",
-						"short": "Server port number",
+						"title": "Port",
 						"type": "`$INTEGER`",
+						"short": "Server port number",
 					},
 					map[string]any{
 						"name": "protocol",
-						"short": "VPN protocol used by the server",
+						"title": "Protocol",
 						"type": "`$STRING`",
+						"short": "VPN protocol used by the server",
 					},
 				},
 				"id": map[string]any{
@@ -136,7 +143,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
@@ -151,16 +157,18 @@ func MakeConfig() map[string]any {
 										"lit": "remote-config.json",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.servers`",
-								},
 								"parts": []any{
 									"01c6b4d1fccf-thankful-aisling",
 									"ext_config",
 									"remote-config.json",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.servers`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

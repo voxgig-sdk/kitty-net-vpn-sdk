@@ -19,7 +19,6 @@ import type {
   ServerListMatch,
 } from '../KittyNetVpnTypes'
 
-// TODO: needs Entity superclass
 class ServerEntity extends KittyNetVpnEntityBase<Server> {
 
   constructor(client: KittyNetVpnSDK, entopts: any) {

@@ -87,38 +87,45 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "country",
-            ["short"] = "Country code of the server location",
+            ["title"] = "Country",
             ["type"] = "`$STRING`",
+            ["short"] = "Country code of the server location",
           },
           {
             ["name"] = "host",
-            ["short"] = "Server hostname or IP address",
+            ["title"] = "Host",
             ["type"] = "`$STRING`",
+            ["short"] = "Server hostname or IP address",
           },
           {
             ["name"] = "id",
-            ["short"] = "Unique identifier for the server",
+            ["title"] = "Id",
             ["type"] = "`$STRING`",
+            ["short"] = "Unique identifier for the server",
           },
           {
             ["name"] = "location",
-            ["short"] = "Geographic location of the server",
+            ["title"] = "Location",
             ["type"] = "`$STRING`",
+            ["short"] = "Geographic location of the server",
           },
           {
             ["name"] = "name",
-            ["short"] = "Display name of the server",
+            ["title"] = "Name",
             ["type"] = "`$STRING`",
+            ["short"] = "Display name of the server",
           },
           {
             ["name"] = "port",
-            ["short"] = "Server port number",
+            ["title"] = "Port",
             ["type"] = "`$INTEGER`",
+            ["short"] = "Server port number",
           },
           {
             ["name"] = "protocol",
-            ["short"] = "VPN protocol used by the server",
+            ["title"] = "Protocol",
             ["type"] = "`$STRING`",
+            ["short"] = "VPN protocol used by the server",
           },
         },
         ["id"] = {
@@ -132,7 +139,6 @@ local function make_config()
             ["name"] = "list",
             ["points"] = {
               {
-                ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
@@ -147,16 +153,18 @@ local function make_config()
                     ["lit"] = "remote-config.json",
                   },
                 },
-                ["select"] = {},
-                ["transform"] = {
-                  ["req"] = "`reqdata`",
-                  ["res"] = "`body.servers`",
-                },
                 ["parts"] = {
                   "01c6b4d1fccf-thankful-aisling",
                   "ext_config",
                   "remote-config.json",
                 },
+                ["rename"] = {},
+                ["transform"] = {
+                  ["req"] = "`reqdata`",
+                  ["res"] = "`body.servers`",
+                },
+                ["args"] = {},
+                ["select"] = {},
               },
             },
           },

@@ -1,0 +1,99 @@
+# Entity: server
+
+main: kit: entity: server: {
+
+  alias: field: {}
+
+  fields: {
+    country: {
+      h: "Country"
+      n: "country"
+      r: false
+      sh: "Country code of the server location"
+      t: "`$STRING`"
+    }
+    host: {
+      h: "Host"
+      n: "host"
+      r: false
+      sh: "Server hostname or IP address"
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      sh: "Unique identifier for the server"
+      t: "`$STRING`"
+    }
+    location: {
+      h: "Location"
+      n: "location"
+      r: false
+      sh: "Geographic location of the server"
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Display name of the server"
+      t: "`$STRING`"
+    }
+    port: {
+      h: "Port"
+      n: "port"
+      r: false
+      sh: "Server port number"
+      t: "`$INTEGER`"
+    }
+    protocol: {
+      h: "Protocol"
+      n: "protocol"
+      r: false
+      sh: "VPN protocol used by the server"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "server"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
+          s: [
+            {
+              lit: "01c6b4d1fccf-thankful-aisling"
+            }
+            {
+              lit: "ext_config"
+            }
+            {
+              lit: "remote-config.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.servers`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

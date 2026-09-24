@@ -11,19 +11,12 @@ const FEATURE_CLASS = {
     test: TestFeature_1.TestFeature,
     timeout: TimeoutFeature_1.TimeoutFeature,
 };
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS = {};
 exports.FEATURE_PLUGINS = FEATURE_PLUGINS;
 class Config {
     makeFeature(fn) {
         const fc = FEATURE_CLASS[fn];
         const fi = new fc();
-        // TODO: errors etc
         return fi;
     }
     // False for a feature added at runtime via options.extend (station's
@@ -114,38 +107,45 @@ class Config {
             "fields": [
                 {
                     "name": "country",
-                    "short": "Country code of the server location",
-                    "type": "`$STRING`"
+                    "title": "Country",
+                    "type": "`$STRING`",
+                    "short": "Country code of the server location"
                 },
                 {
                     "name": "host",
-                    "short": "Server hostname or IP address",
-                    "type": "`$STRING`"
+                    "title": "Host",
+                    "type": "`$STRING`",
+                    "short": "Server hostname or IP address"
                 },
                 {
                     "name": "id",
-                    "short": "Unique identifier for the server",
-                    "type": "`$STRING`"
+                    "title": "Id",
+                    "type": "`$STRING`",
+                    "short": "Unique identifier for the server"
                 },
                 {
                     "name": "location",
-                    "short": "Geographic location of the server",
-                    "type": "`$STRING`"
+                    "title": "Location",
+                    "type": "`$STRING`",
+                    "short": "Geographic location of the server"
                 },
                 {
                     "name": "name",
-                    "short": "Display name of the server",
-                    "type": "`$STRING`"
+                    "title": "Name",
+                    "type": "`$STRING`",
+                    "short": "Display name of the server"
                 },
                 {
                     "name": "port",
-                    "short": "Server port number",
-                    "type": "`$INTEGER`"
+                    "title": "Port",
+                    "type": "`$INTEGER`",
+                    "short": "Server port number"
                 },
                 {
                     "name": "protocol",
-                    "short": "VPN protocol used by the server",
-                    "type": "`$STRING`"
+                    "title": "Protocol",
+                    "type": "`$STRING`",
+                    "short": "VPN protocol used by the server"
                 }
             ],
             "id": {
@@ -159,7 +159,6 @@ class Config {
                     "name": "list",
                     "points": [
                         {
-                            "args": {},
                             "kind": "http",
                             "method": "GET",
                             "orig": "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json",
@@ -174,16 +173,18 @@ class Config {
                                     "lit": "remote-config.json"
                                 }
                             ],
-                            "select": {},
-                            "transform": {
-                                "req": "`reqdata`",
-                                "res": "`body.servers`"
-                            },
                             "parts": [
                                 "01c6b4d1fccf-thankful-aisling",
                                 "ext_config",
                                 "remote-config.json"
-                            ]
+                            ],
+                            "rename": {},
+                            "transform": {
+                                "req": "`reqdata`",
+                                "res": "`body.servers`"
+                            },
+                            "args": {},
+                            "select": {}
                         }
                     ]
                 }

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServerEntity = void 0;
 const KittyNetVpnEntityBase_1 = require("../KittyNetVpnEntityBase");
-// TODO: needs Entity superclass
 class ServerEntity extends KittyNetVpnEntityBase_1.KittyNetVpnEntityBase {
     constructor(client, entopts) {
         super(client, entopts);
