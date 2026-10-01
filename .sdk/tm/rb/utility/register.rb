@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 KittyNetVpnUtility.registrar = ->(u) {
   u.clean = KittyNetVpnUtilities::Clean
+  u.clean_add = KittyNetVpnUtilities::CleanAdd
+  u.clean_explain = KittyNetVpnUtilities::CleanExplain
   u.done = KittyNetVpnUtilities::Done
   u.make_error = KittyNetVpnUtilities::MakeError
   u.feature_add = KittyNetVpnUtilities::FeatureAdd

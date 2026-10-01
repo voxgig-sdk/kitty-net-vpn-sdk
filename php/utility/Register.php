@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 KittyNetVpnUtility::setRegistrar(function (KittyNetVpnUtility $u): void {
     $u->clean = [KittyNetVpnClean::class, 'call'];
+    $u->clean_add = [KittyNetVpnClean::class, 'add'];
+    $u->clean_explain = [KittyNetVpnDone::class, 'clean_explain'];
     $u->done = [KittyNetVpnDone::class, 'call'];
     $u->make_error = [KittyNetVpnMakeError::class, 'call'];
     $u->feature_add = [KittyNetVpnFeatureAdd::class, 'call'];
