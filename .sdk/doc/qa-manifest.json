@@ -3,5 +3,17 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Country code of the server location",
+      "Display name of the server",
+      "Geographic location of the server",
+      "Kitty Net VPN API Server",
+      "Kitty Net VPN provides fast access to YouTube, Instagram, and other sites without blocks, encrypts traffic, and does not keep logs.",
+      "Server hostname or IP address",
+      "Successful response containing the list of VPN servers",
+      "Unique identifier for the server"
+    ]
+  }
 }

@@ -74,6 +74,10 @@ main: kit: entity: server: {
           }
           m: "GET"
           o: "/01c6b4d1fccf-thankful-aisling/ext_config/remote-config.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "01c6b4d1fccf-thankful-aisling"

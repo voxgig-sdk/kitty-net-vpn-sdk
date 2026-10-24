@@ -17,19 +17,24 @@ const PLAN = [
         "args": [],
         "select": {},
         "headers": [],
+        "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [],
+        "queryArgs": [],
         "auth": null,
         "status": 200,
         "sample": {
             "servers": [
                 {
-                    "country": "x",
-                    "host": "x",
                     "id": "x",
-                    "location": "x",
                     "name": "x",
+                    "host": "x",
                     "port": 1,
-                    "protocol": "x"
+                    "protocol": "x",
+                    "location": "x",
+                    "country": "x"
                 }
             ]
         },
